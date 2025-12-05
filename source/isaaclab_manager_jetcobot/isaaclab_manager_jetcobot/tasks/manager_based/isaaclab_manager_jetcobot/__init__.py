@@ -11,13 +11,34 @@ from . import agents
 # Register Gym environments.
 ##
 
-
+# Reach Task
 gym.register(
-    id="Template-Isaaclab-Manager-Jetcobot-v0",
+    id="Isaaclab-Manager-Jetcobot-Reach-v0",
     entry_point="isaaclab.envs:ManagerBasedRLEnv",
     disable_env_checker=True,
     kwargs={
-        "env_cfg_entry_point": f"{__name__}.isaaclab_manager_jetcobot_env_cfg:IsaaclabManagerJetcobotEnvCfg",
-        "skrl_cfg_entry_point": f"{agents.__name__}:skrl_ppo_cfg.yaml",
+        "env_cfg_entry_point": f"{__name__}.isaaclab_manager_jetcobot_reach_env_cfg:JetcobotReachEnvCfg",
+        "skrl_cfg_entry_point": f"{agents.__name__}:reach_task_skrl_ppo_cfg.yaml",
+    },
+)
+
+gym.register(
+    id="Isaaclab-Manager-Jetcobot-Reach-v0-PLAY",
+    entry_point="isaaclab.envs:ManagerBasedRLEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": f"{__name__}.isaaclab_manager_jetcobot_reach_env_cfg:JetcobotReachSceneCfg_PLAY",
+        "skrl_cfg_entry_point": f"{agents.__name__}:reach_task_skrl_ppo_cfg.yaml",
+    },
+)
+
+# Lift Task
+gym.register(
+    id="Isaaclab-Manager-Jetcobot-Lift-v0",
+    entry_point="isaaclab.envs:ManagerBasedRLEnv",
+    disable_env_checker=True,
+    kwargs={
+        "env_cfg_entry_point": f"{__name__}.isaaclab_manager_jetcobot_lift_env_cfg:JetcobotLiftEnvCfg",
+        "skrl_cfg_entry_point": f"{agents.__name__}:lift_task_skrl_ppo_cfg.yaml",
     },
 )
