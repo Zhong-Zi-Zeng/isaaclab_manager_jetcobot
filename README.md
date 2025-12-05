@@ -12,6 +12,11 @@ It allows you to develop in an isolated environment, outside of the core Isaac L
 
 **Keywords:** extension, template, isaaclab
 
+
+## Dowmload Assets
+- Download Jetcobot assets from [here](https://github.com/Zhong-Zi-Zeng/isaaclab_manager_jetcobot/releases/tag/v1.0.0)
+
+
 ## Installation
 
 - Install Isaac Lab by following the [installation guide](https://isaac-sim.github.io/IsaacLab/main/source/setup/installation/index.html).
